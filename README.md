@@ -8,7 +8,7 @@ Desplega N8N en **Heroku**, fácil y rápido. Solo tendrás que darle al botón 
 
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/aitorroma/n8n-heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/biercoff/n8nHeroku)
 
 
 
