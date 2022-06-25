@@ -1,0 +1,62 @@
+{
+    "name": "n8n",
+    "description": "Desplega N8N en Heroku",
+    "keywords": [
+      "n8n",
+      "node",
+      "automation"
+    ],
+    "website": "https://n8n.io",
+    "repository": "https://github.com/aitorroma/n8n-heroku",
+    "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/editor-ui/public/favicon-32x32.png",
+    "success_url": "/",
+    "stack": "container",
+    "env": {
+      "N8N_BASIC_AUTH_ACTIVE": {
+        "description": "Activar el usuario y contraseña.",
+        "value": "true"
+      },
+      "GENERIC_TIMEZONE": {
+        "description": "Timezone que usaras en la instancia de n8n.",
+        "value": "Europe/Madrid"
+      },
+      "N8N_BASIC_AUTH_USER": {
+        "description": "Usuario que usarás para acceder a n8n.",
+        "value": "user"
+      },
+      "N8N_BASIC_AUTH_PASSWORD": {
+        "description": "Contraseña que usarás para acceder a n8n.",
+        "value": "pass"
+      },
+      "N8N_ENCRYPTION_KEY": {
+        "description": "Esto es para establecer la clave de cifrado n8n en un valor estático, de modo que heroku no lo anule, causando que AUTH falle.",
+        "value": "MdRRn2jiZuVeh5tI77A6"
+      },
+      "PGSSLMODE": {
+        "description": "Heroku hizo un cambio, por lo que se requiere SSL para conectarse a Postgres",
+        "value": "require"
+      },
+      "NODE_TLS_REJECT_UNAUTHORIZED": {
+        "description": "Dejar este valor a 0",
+        "value": "0"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql",
+        "options": {
+          "version": "11"
+        }
+      },
+      {
+        "plan": "papertrail:choklad"
+      }
+    ]
+  }
+  
